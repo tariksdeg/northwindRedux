@@ -12,6 +12,7 @@ import {
   Badge,
 } from "reactstrap";
 import * as cartActions from "../../redux/actions/cartActions";
+import { Link } from "react-router-dom";
 
 class CartSummary extends Component {
   renderEmpty() {
@@ -38,7 +39,7 @@ class CartSummary extends Component {
             </DropdownItem>
           ))}
           <DropdownItem divider />
-          <DropdownItem>Reset</DropdownItem>
+          <DropdownItem><Link to="cart">Sepete Git</Link></DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
     );
