@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Badge, Button, ListGroup, ListGroupItem, Table } from "reactstrap";
+import { Badge, Button,  Table } from "reactstrap";
 import { bindActionCreators } from "redux";
 import * as productActions from "../../redux/actions/productActions";
 import * as cartActions from "../../redux/actions/cartActions"
 import alertify from "alertifyjs"
+import { Link } from "react-router-dom";
 
 class ProductList extends Component {
   componentDidMount() {
@@ -36,7 +37,7 @@ alertify.success(product.productName + " Sepete Eklendi",2)
             {this.props.products.map((product) => (
               <tr key={product.id}>
                 <td scope="row">{product.id}</td>    
-                <td>{product.productName}</td>
+                <td><Link to={"/saveproduct/"+product.id}>{product.productName}</Link></td>
                 <td>{product.quantityPerUnit}</td>
                 <td>{product.unitPrice}</td>
                 <td>{product.unitsInStock}</td>

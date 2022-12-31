@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -30,12 +31,12 @@ export default class Navi extends Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">APP</NavbarBrand>
+          <NavbarBrand ><Link to="/">Northwind Mağazası</Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="m1-auto" navbar>
               <NavItem>
-                <NavLink></NavLink>
+                <NavLink><Link to="/saveproduct">Ürün Ekle</Link></NavLink>
               </NavItem>
               <NavItem>
                 <NavLink></NavLink>

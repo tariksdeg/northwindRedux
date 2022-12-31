@@ -615,6 +615,21 @@
       "quantityPerUnit": "1",
       "unitsInStock": "2",
       "id": 78
+    },
+    {
+      "id": 79
+    },
+    {
+      "productName": "dsadsa",
+      "categoryId": 4,
+      "id": 80
+    },
+    {
+      "categoryId": 5,
+      "id": 81
+    },
+    {
+      "id": 82
     }
   ],
   "categories": [
